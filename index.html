@@ -11,7 +11,7 @@
       const input = document.getElementById('msg');
       if (!input.value) return;
       const li = document.createElement('li');
-      li.textContent = input.value;
+      li.innerHTML = `${input.value} <button onclick="this.parentElement.remove()">x</button>`;
       document.getElementById('board').appendChild(li);
       input.value = '';
     }
