@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: sans-serif; max-width: 500px; margin: 40px auto;">
+  <h2>Team Kudos</h2>
+  <input id="msg" placeholder="Give someone a shout-out..." style="width: 70%; padding: 8px;">
+  <button onclick="addKudos()" style="padding: 8px;">Post</button>
+  <ul id="board"></ul>
+
+  <script>
+    function addKudos() {
+      const input = document.getElementById('msg');
+      if (!input.value) return;
+      const li = document.createElement('li');
+      li.textContent = input.value;
+      document.getElementById('board').appendChild(li);
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
